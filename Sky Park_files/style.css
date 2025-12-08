@@ -21,7 +21,7 @@ body {
     margin: 0;
     font-size: 14px;
     overflow-x: hidden;
-    font-family: 'optima' !important;
+    /* font-family: 'optima' !important; */
     -webkit-font-smoothing: antialiased;
     /* font-family: 'NEUTRATEXT-BOOKALT'; */
     /*  */
@@ -4833,7 +4833,7 @@ button.btn.btn-danger.dbrochure {
 .head-center {
     text-align: left;
     color: #353736 !important;
-    font-family: 'optima' !important;
+    /* font-family: 'optima' !important; */
 }
 
 .footer {
