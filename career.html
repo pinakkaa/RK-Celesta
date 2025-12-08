@@ -55,6 +55,12 @@
                                     var webengage;!function(w,e,b,n,g){function o(e,t){e[t[t.length-1]]=function(){r.__queue.push([t.join("."),
                                     arguments])}}var i,s,r=w[b],z=" ",l="init options track screen onReady".split(z),a="webPersonalization feedback survey notification notificationInbox".split(z),c="options render clear abort".split(z),p="Prepare Render Open Close Submit Complete View Click".split(z),u="identify login logout setAttribute".split(z);if(!r||!r.__v){for(w[b]=r={__queue:[],__v:"6.0",user:{}},i=0;i < l.length;i++)o(r,[l[i]]);for(i=0;i < a.length;i++){for(r[a[i]]={},s=0;s < c.length;s++)o(r[a[i]],[a[i],c[s]]);for(s=0;s < p.length;s++)o(r[a[i]],[a[i],"on"+p[s]])}for(i=0;i < u.length;i++)o(r.user,["user",u[i]]);setTimeout(function(){var f=e.createElement("script"),d=e.getElementById("_webengage_script_tag");f.type="text/javascript",f.async=!0,f.src=("https:"==e.location.protocol?"https://widgets.in.webengage.com":"http://widgets.in.webengage.com")+"/js/webengage-min-v-6.0.js",d.parentNode.insertBefore(f,d)})}}(window,document,"webengage");webengage.init("in~d3a49b43");
                                     </script>-->
+
+                                    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
                         <style>
             .page_loader, .wait_loader {
                 height: 100%;
@@ -226,7 +232,7 @@
             }
     
             .positions-section {
-                background: white;
+                background: #F6F6F6;
                 padding: 40px;
                 border-radius: 10px;
                 box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -286,7 +292,7 @@
             }
     
             .apply-section {
-                background: white;
+                background: #F6F6F6;
                 padding: 35px;
                 border-radius: 10px;
                 box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -425,7 +431,7 @@
                 display: none !important;
             }
             body{
-                background-color: #fffaef !important;
+                background: #fff !important;
             }
             body{
                 background-color: #fffaef;
@@ -442,6 +448,51 @@
                 .nav-link-desk{
                     display: none !important;
                 }
+            }
+            .cinzel {
+                font-family: "Cinzel", serif !important;
+                font-optical-sizing: auto;
+                font-weight: 600;
+                font-style: normal;
+                font-size: 2rem;
+            }
+
+            .raleway {
+                font-family: "Raleway", sans-serif !important;
+                font-optical-sizing: auto;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 1rem;
+                color: #000 !important;
+            }
+            .section-title-left{
+                font-family: "Cinzel", serif !important;
+                font-optical-sizing: auto;
+                font-weight: 600;
+                font-style: normal;
+                font-size: 2rem;
+                text-align: left;
+            }
+            .section-title{
+                font-family: "Cinzel", serif !important;
+                font-optical-sizing: auto;
+                font-weight: 600;
+                font-style: normal;
+            font-size: 2.5rem;
+                text-align: center;
+                color: white !important;
+            }
+            .sub-title{
+                font-family: "Raleway", sans-serif !important;
+                font-size: 1rem !important;
+                text-align: center;
+            }
+            .paragraph{
+                font-family: "Raleway", sans-serif !important;
+            }
+            .section-intro{
+                font-family: "Raleway", sans-serif !important;
+                color: #00000098;
             }
         </style>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
@@ -544,8 +595,8 @@
 
                 <div class="hero-section">
                     <div class="hero-content">
-                        <p class="hero-subtitle">Explore Job Opportunities at Our Real Estate Company</p>
-                        <h1 class="hero-title">CAREERS</h1>
+                        <h1 class="section-title">CAREERS</h1>
+                        <p class="sub-text">Explore Job Opportunities at Our Real Estate Company</p>
                     </div>
                 </div>
             

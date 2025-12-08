@@ -50,6 +50,16 @@
                                     var webengage;!function(w,e,b,n,g){function o(e,t){e[t[t.length-1]]=function(){r.__queue.push([t.join("."),
                                     arguments])}}var i,s,r=w[b],z=" ",l="init options track screen onReady".split(z),a="webPersonalization feedback survey notification notificationInbox".split(z),c="options render clear abort".split(z),p="Prepare Render Open Close Submit Complete View Click".split(z),u="identify login logout setAttribute".split(z);if(!r||!r.__v){for(w[b]=r={__queue:[],__v:"6.0",user:{}},i=0;i < l.length;i++)o(r,[l[i]]);for(i=0;i < a.length;i++){for(r[a[i]]={},s=0;s < c.length;s++)o(r[a[i]],[a[i],c[s]]);for(s=0;s < p.length;s++)o(r[a[i]],[a[i],"on"+p[s]])}for(i=0;i < u.length;i++)o(r.user,["user",u[i]]);setTimeout(function(){var f=e.createElement("script"),d=e.getElementById("_webengage_script_tag");f.type="text/javascript",f.async=!0,f.src=("https:"==e.location.protocol?"https://widgets.in.webengage.com":"http://widgets.in.webengage.com")+"/js/webengage-min-v-6.0.js",d.parentNode.insertBefore(f,d)})}}(window,document,"webengage");webengage.init("in~d3a49b43");
                                     </script>-->
+
+
+
+
+                                    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+
                         <style>
             .page_loader, .wait_loader {
                 height: 100%;
@@ -78,6 +88,7 @@
             }
             .paragraph{
                 font-size: 1rem;
+                font-family: "Raleway", sans-serif !important;
             }
         </style>
         <style>
@@ -92,12 +103,12 @@
                 margin-bottom: 50px;
             }
     
-            .section-title h2 {
+            /* .section-title h2 {
                 font-size: 2.5rem;
                 color: #000;
                 margin-bottom: 10px;
                 font-weight: 500;
-            }
+            } */
     
             .section-title .underline {
                 width: 80px;
@@ -115,10 +126,10 @@
             }
     
             .feature-card {
-                background: white;
+                background: #F6F6F6;
                 padding: 35px 25px;
                 border-radius: 12px;
-                box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+                box-shadow: 0 12px 15px rgba(0, 0, 0, 0.08);
                 transition: transform 0.3s ease, box-shadow 0.3s ease;
                 text-align: center;
             }
@@ -156,13 +167,15 @@
                 color: #000;
                 margin-bottom: 15px;
                 font-weight: 500;
+                font-family: "Raleway", sans-serif !important;
             }
     
             .feature-card p {
                 font-size: 0.85rem;
                 color: #5a6c7d;
-                line-height: 1.7;
+                line-height: 1.5;
                 font-weight: 400;
+                font-family: "Raleway", sans-serif !important;
             }
     
             @media (max-width: 768px) {
@@ -333,13 +346,13 @@
                 margin-bottom: 60px;
             }
     
-            .section-title h2 {
+            /* .section-title h2 {
                 font-size: 2.5rem;
                 color: #000;
                 font-weight: 700;
                 letter-spacing: 3px;
                 text-transform: uppercase;
-            }
+            } */
     
             .blogs-grid {
                 display: grid;
@@ -393,6 +406,7 @@
                 font-weight: 500;
                 margin-bottom: 15px;
                 line-height: 1.4;
+                font-family: "Raleway", sans-serif !important;
             }
     
             .blog-excerpt {
@@ -401,6 +415,7 @@
                 line-height: 1.5;
                 margin-bottom: 25px;
                 font-weight: 400;
+                font-family: "Raleway", sans-serif !important;
             }
     
             .read-more-btn {
@@ -414,6 +429,7 @@
                 font-weight: 500;
                 font-size: 0.85rem;
                 transition: all 0.3s ease;
+                font-family: "Raleway", sans-serif !important;
             }
     
             .read-more-btn:hover {
@@ -519,8 +535,8 @@
                 background-color: #FFF !important;
             }
             .feature-icon{
-                height: 65px;
-                width: 65px;
+                height: 55px;
+                width: 55px;
             }
             header.sticky .logo a img{
                 /* max-width: 10rem; */
@@ -553,6 +569,45 @@
                     padding: 1rem;
                 }
             }
+                        
+.cinzel {
+  font-family: "Cinzel", serif !important;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 2rem;
+}
+
+.raleway {
+  font-family: "Raleway", sans-serif !important;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+}
+.section-title-left{
+  font-family: "Cinzel", serif !important;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 2rem;
+  text-align: left;
+}
+.section-title{
+  font-family: "Cinzel", serif !important;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 2rem;
+  text-align: center;
+}
+.sub-title{
+    font-family: "Raleway", sans-serif !important;
+    font-size: 1rem !important;
+}
+.right-desc{
+    font-family: "Raleway", sans-serif !important;
+}
         </style>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
@@ -667,7 +722,7 @@
                 <div class="about__left" data-scroll-offset="10%">
                     <div class="about__left__title">
                         <h2 class="sub-title is-inview" data-scroll="" data-scroll-speed="1" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);">About Us</h2>
-                        <h1 class="heading-primary mb-1 is-inview" data-scroll="" data-scroll-speed="1.2" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);">Our Story & Legacy</h1>
+                        <h1 class="section-title-left" data-scroll="" data-scroll-speed="1.2" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);">Our Story & Legacy</h1>
                         <div class="about__left__title__content">
                             <p class="paragraph is-inview" data-scroll="" data-scroll-speed="1.4" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);"></p><p class="paragraph">At DS & JAKS DEVELOPERS, our foundation is built on a simple yet powerful commitment: Trust, Quality, and Timely Delivery. With a rich legacy in the dynamic Bangalore real estate market, we have consistently focused on transforming vacant land into vibrant, sustainable, and high-quality residential communities.</p>
 <p class="paragraph">We recognized the need for spaces that not only meet the functional requirements of modern living but also offer true value and appreciation potential for our residents. This vision drives every project we undertake, from mid-segment apartments to premium residential layouts.</p>
@@ -687,8 +742,8 @@
     <div class="container-fluid projects pro-sect ongoing-project">
         <div class="row custom-row">
             <div class="col-12">
-                <h2 class="sub-title mb-5 mt-4 is-inview" data-scroll="" data-scroll-speed="1" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);">ONGOING PROJECT</h2>
-                <h3 class="heading-primary is-inview" data-scroll="" data-scroll-speed="1.2" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);"> EXPLORE 3 BHK APARTMENTS IN HORAMAVU </h3>
+                <h2 class="sub-title mb-3 mt-4 is-inview" data-scroll="" data-scroll-speed="1" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);">ONGOING PROJECT</h2>
+                <h3 class="section-title-left" data-scroll="" data-scroll-speed="1.2" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);"> EXPLORE 3 BHK APARTMENTS IN HORAMAVU </h3>
             </div>
         </div>
         <!-- <div class="row custom-row projects__tabs mb-5 mt-5 is-inview" id="filters" data-scroll="" data-scroll-speed="1.3" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);">
@@ -762,7 +817,7 @@
 
 
     <div class="right-block">
-        <h2 class="right-title">Experience Elevated Living at Needs3 Project 168</h2>
+        <h2 class="section-title-small">Experience Elevated Living at Needs3 Project 168</h2>
 
         <p class="right-desc">
             Welcome to a curated collection of premium 3-BHK homes set within a beautifully landscaped gated community. Enjoy modern architecture, superior connectivity, and a perfectly balanced lifestyle in the heart of Horamavu.
