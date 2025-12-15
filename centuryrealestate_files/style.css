@@ -454,11 +454,11 @@ body {
     height: 50rem;
     width: 100%;
 }
-.inView {
+/* .inView {
     opacity: 0;
     -webkit-animation: fade-in ease-in-out 1s both;
     animation: fade-in ease-in-out 1s both;
-}
+} */
 header {
     position: fixed;
     background: #0F4E8Cb2
@@ -1693,9 +1693,9 @@ font-family: "corporate_sregular", Verdana, Geneva, Tahoma, sans-serif;
     position: relative;
 }
 .enquiry {
-    background-color: #0F4E8C;
-    /* margin-top: 1.5rem; */
-    opacity: 0;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: none !important;
 }
 .enquiry__form {
     padding-top: 3rem;

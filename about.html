@@ -310,7 +310,7 @@
         <!-- End Google Tag Manager (noscript) -->
         <div class="page_loader" style="display: none;"></div>
         <div class="wait_loader"></div>
-        <header class="container-fluid sticky">
+        <header class="container-fluid sticky" style="top: 0;">
             <div class="row custom-row">
                 <div class="col-6 col-md-2 col-lg-2 logo">
                     <a href="./index.html">
@@ -336,8 +336,14 @@
                         </li>
                         
                         <li class="nav-link-desk">
-                            <a class="enquire show_pointer trigger_enquire_now" data-toggle="modal" data-target="#enquire_now_Modal">Enquire</a>
-                        </li>
+                            <a href="#"
+                               class="enquire show_pointer trigger_enquire_now"
+                               data-bs-toggle="modal"
+                               data-bs-target="#enquire_now_Modal">
+                               Enquire
+                            </a>
+                          </li>
+                          
                         <li>
                             <div class="nav__hamburger">
                                 <span></span>
@@ -394,7 +400,7 @@
                 </div>
             </div>
         </header>
-        <div class="scroller" data-scroll-container="" data-scroll-section-inview="" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -1800, 0, 1); opacity: 1; pointer-events: all;">
+        <div class="scroller">
             <main>
     <div class="container-fluid banner p-0" data-scroll-repeat="" data-scroll="" data-scroll-class="inView" style="background: #000 url(./images/1920\ ×\ 1075\ px\ \ about\ us\ banner.png)no-repeat top center/cover;">
     </div>
@@ -995,20 +1001,198 @@
             <h3 class="heading-primary p-0" data-scroll="" data-scroll-speed="1.2" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);">To be the most respected and progressive real estate brand that will catalyse the industry and play a significant role in the building of a new and a better India, suited for the evolving life and lifestyle of its people.</h3>
         </div>
     </div> -->
-    <div class="container-fluid missionvalues">
+
+
+
+
+
+
+
+
+    <!-- <div class="container-fluid missionvalues">
         <div class="row">
             <div class="col-12 col-md-6 missionvalues__block lazy" style="background: #000 url(./images/MISSON\ AND\ VISION.png)no-repeat center/cover;">
                 <h2 class="sub-title mb-5 p-0" data-scroll="" data-scroll-speed="1" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);">Mission Statement</h2>
                 <h3 class="heading-primary p-0" data-scroll="" data-scroll-speed="1.2" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);">To consistently deliver high-quality, strategically located residential properties in Bangalore, exceeding customer expectations through uncompromising standards of construction, ethical practices, and timely project delivery, thereby securing sustainable value for our stakeholders and transforming land into lasting legacies.</h3>
-                <!-- <span data-bs-toggle="modal" data-bs-target="#mission" class="link" data-scroll="" data-scroll-speed="1.2" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);"><span></span>Learn More</span> -->
             </div>
             <div class="col-12 col-md-6 missionvalues__block lazy" style="background: #000 url(./images/MISSON\ AND\ VISION.png)no-repeat center/cover;">
                 <h2 class="sub-title mb-5 p-0" data-scroll="" data-scroll-speed="1" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);">Vision Statement</h2>
                 <h3 class="heading-primary p-0" data-scroll="" data-scroll-speed="1.2" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);">To be recognised as a leading and most trusted developer in the Bangalore residential market, synonymous with reliability, architectural excellence, and customer-centricity, driving the future of quality living in high-growth corridors.</h3>
-                <!-- <span data-bs-toggle="modal" data-bs-target="#vision" class="link" data-scroll="" data-scroll-speed="1.2" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);"><span></span>Learn More</span> -->
             </div>
         </div>
-    </div>
+    </div> -->
+
+
+    <section class="mv-section">
+        <div class="mv-container">
+          
+          <!-- Section Title -->
+          <div class="mv-header">
+            <h2 class="section-title">MISSION & VISION</h2>
+            <span class="mv-line"></span>
+          </div>
+      
+          <!-- Vision Row -->
+          <div class="mv-row">
+            <div class="mv-content">
+              <h3><span></span>Mission Statement</h3>
+              <p class="paragraph mb-3 is-inview">
+                To consistently deliver high-quality, strategically located residential properties in Bangalore, exceeding customer expectations through uncompromising standards of construction, ethical practices, and timely project delivery, thereby securing sustainable value for our stakeholders and transforming land into lasting legacies.
+              </p>
+            </div>
+      
+            <div class="mv-image">
+              <img src="./images/MISSON AND VISION.png" alt="Our Vision">
+            </div>
+          </div>
+      
+          <!-- Mission Row -->
+          <div class="mv-row reverse">
+            <div class="mv-image">
+              <img src="./images/Vision.png" alt="Our Mission">
+            </div>
+      
+            <div class="mv-content">
+              <h3><span></span>Vision Statement</h3>
+              <p>
+                To be recognised as a leading and most trusted developer in the Bangalore residential market, synonymous with reliability, architectural excellence, and customer-centricity, driving the future of quality living in high-growth corridors.
+              </p>
+            </div>
+          </div>
+      
+        </div>
+      </section>
+
+      
+
+      <style>
+        .mv-section {
+  padding: 50px 20px;
+  background: #ffffff;
+  font-family: "Georgia", serif;
+}
+
+.mv-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header */
+.mv-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+/* .mv-header h2 {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #1f2a44;
+} */
+
+/* .mv-line {
+  display: inline-block;
+  width: 50px;
+  height: 3px;
+  background: #ff6a00;
+  margin-top: 12px;
+} */
+
+/* Rows */
+.mv-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.mv-row.reverse {
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Content */
+.mv-content h3 {
+  font-size: 22px;
+  margin-bottom: 16px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Cinzel", serif !important;
+}
+
+.mv-content h3 span {
+  width: 4px;
+  height: 22px;
+  background: #0F4E8C;
+  display: inline-block;
+}
+
+.mv-content p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #454545;
+  font-family: "Raleway", sans-serif !important;
+}
+
+/* Images */
+.mv-image img {
+  width: 100%;
+  border-radius: 14px;
+  object-fit: cover;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+  height: 320px;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+  .mv-row {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .mv-row.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .mv-header h2 {
+    font-size: 28px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .mv-section {
+    padding: 70px 16px;
+  }
+
+  .mv-header {
+    margin-bottom: 50px;
+  }
+
+  .mv-content h3 {
+    font-size: 20px;
+  }
+
+  .mv-content p {
+    font-size: 15px;
+  }
+}
+
+      </style>
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- <div class="container-fluid management">
         <div class="row custom-row pb-4">
             <h2 class="sub-title mb-5 p-0" data-scroll="" data-scroll-speed="1" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);">Key management</h2>
@@ -1686,7 +1870,7 @@
         <link rel="stylesheet" href="./about_files/all.min.css" as="style" onload="this.onload=null;this.rel=&#39;stylesheet&#39;">
         <link rel="stylesheet" href="./about_files/owl.carousel.min.css" as="style" onload="this.onload=null;this.rel=&#39;stylesheet&#39;">
         <link rel="stylesheet" href="./about_files/jquery.magnify.min.css" as="style" onload="this.onload=null;this.rel=&#39;stylesheet&#39;">
-        <link rel="stylesheet" href="./about_files/locomotive-scroll.css" as="style" onload="this.onload=null;this.rel=&#39;stylesheet&#39;">
+        <!-- <link rel="stylesheet" href="./about_files/locomotive-scroll.css" as="style" onload="this.onload=null;this.rel=&#39;stylesheet&#39;"> -->
         <link rel="stylesheet" href="./about_files/vanilla-tabs.min.css" as="style" onload="this.onload=null;this.rel=&#39;stylesheet&#39;">
         <script src="./about_files/jquery.min.js.download" defer=""></script>
         <script src="./about_files/popper.min.js.download" defer=""></script>
@@ -1695,7 +1879,7 @@
         <script src="./about_files/splitting.min.js.download" defer=""></script>
         <script src="./about_files/owl.carousel.min.js.download" defer=""></script>
         <script src="./about_files/jquery.magnify.min.js.download" defer=""></script>
-        <script src="./about_files/locomotive-scroll.min.js.download" defer=""></script>
+        <!-- <script src="./about_files/locomotive-scroll.min.js.download" defer=""></script> -->
         <script src="./about_files/gsap.min.js.download" defer=""></script>
         <script src="./about_files/ScrollTrigger.min.js.download" defer=""></script>
         <script async="" src="./about_files/widgets.js.download" charset="utf-8" defer=""></script>
@@ -1706,4 +1890,24 @@
         <script src="https://cw1.livserv.in?did=1937&amp;pid=1"></script> -->
 
             
-<span class="c-scrollbar"><span class="c-scrollbar_thumb" style="height: 129.987px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 255.156, 0, 1);"></span></span><iframe scrolling="no" frameborder="0" allowtransparency="true" src="./about_files/widget_iframe.2f70fb173b9000da126c79afe2098f02.html" title="Twitter settings iframe" style="display: none;"></iframe><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" src="./about_files/saved_resource(1).html"></iframe></body></html>
+<!-- <span class="c-scrollbar"><span class="c-scrollbar_thumb" style="height: 129.987px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 255.156, 0, 1);"></span></span> -->
+
+<iframe scrolling="no" frameborder="0" allowtransparency="true" src="./about_files/widget_iframe.2f70fb173b9000da126c79afe2098f02.html" title="Twitter settings iframe" style="display: none;"></iframe><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" src="./about_files/saved_resource(1).html"></iframe>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const scroller = document.querySelector(".scroller");
+      if (scroller) {
+        scroller.style.transform = "none";
+        scroller.style.opacity = "1";
+        scroller.style.pointerEvents = "auto";
+      }
+    
+      document.documentElement.classList.remove(
+        "has-scroll-init",
+        "has-scroll-smooth",
+        "has-scroll-scrolling"
+      );
+    });
+    </script>
+</body></html>

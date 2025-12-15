@@ -473,6 +473,7 @@ header {
 header.sticky {
     padding: 0.5rem 0;
     background-color: #0F4E8C;
+    top: 0;
 }
 header.sticky .nav ul li {
     margin: 0.3rem 0.5rem;
@@ -1688,9 +1689,9 @@ header.white .nav ul li a.enquire {
     position: relative;
 }
 .enquiry {
-    background-color: #0F4E8C;
-    margin-top: 1.5rem;
-    opacity: 0;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: none !important;
 }
 .enquiry__form {
     padding-top: 3rem;

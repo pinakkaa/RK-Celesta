@@ -293,11 +293,6 @@ $(document).ready(function () {
 
   gsap.registerPlugin(ScrollTrigger);
 
-  const scroller = new LocomotiveScroll({
-    el: document.querySelector(".scroller"),
-    smooth: true,
-  });
-
   scroller.on("scroll", ScrollTrigger.update);
 
   ScrollTrigger.scrollerProxy(".scroller", {
