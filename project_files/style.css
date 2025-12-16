@@ -114,7 +114,8 @@ html {
     padding-right: 0 !important;
 }
 p {
-    font-family: "corporate_sregular", Verdana, Geneva, Tahoma, sans-serif;
+    /* font-family: "corporate_sregular", Verdana, Geneva, Tahoma, sans-serif; */
+    font-family: "Raleway", sans-serif !important;
 }
 .desktop {
     display: block !important;

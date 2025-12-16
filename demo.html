@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* ===== ROOT WRAPPER ===== */
+.sb-contact-wrapper {
+  background: #ffffff;
+  padding: 80px 20px;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+/* ===== CONTAINER ===== */
+.sb-contact-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* ===== LEFT CONTENT ===== */
+.sb-contact-title {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.sb-contact-subtitle {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+/* ===== FORM CARD ===== */
+.sb-contact-form {
+  background: #f6f6f6;
+  padding: 30px;
+  border-radius: 4px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  max-width: 520px;
+}
+
+/* ===== FORM ROWS ===== */
+.sb-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+/* ===== INPUTS ===== */
+.sb-input {
+  width: 100%;
+  padding: 11px 14px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  outline: none;
+  background: #fff;
+}
+
+.sb-input:focus {
+  border-color: #000;
+}
+
+/* ===== TEXTAREA ===== */
+.sb-textarea {
+  width: 100%;
+  height: 110px;
+  resize: none;
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.sb-textarea:focus {
+  border-color: #000;
+}
+
+/* ===== CHECKBOX ===== */
+.sb-checkbox-row {
+  display: flex;
+  gap: 10px;
+  font-size: 12px;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 22px;
+}
+
+.sb-checkbox-row input {
+  margin-top: 3px;
+}
+
+/* ===== BUTTON ===== */
+.sb-submit-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 11px 30px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.sb-submit-btn:hover {
+  background: #222;
+}
+
+/* ===== RIGHT SIDE ===== */
+.sb-contact-right {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.sb-map-box iframe {
+  width: 100%;
+  height: 260px;
+  border: none;
+}
+
+/* ===== OFFICE INFO ===== */
+.sb-office-info h3 {
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.sb-office-info p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.7;
+}
+
+.sb-office-contact {
+  margin-top: 10px;
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 992px) {
+  .sb-contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .sb-contact-form {
+    max-width: 100%;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 576px) {
+  .sb-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .sb-contact-wrapper {
+    padding: 60px 16px;
+  }
+
+  .sb-contact-title {
+    font-size: 22px;
+  }
+
+  .sb-map-box iframe {
+    height: 220px;
+  }
+}
+
+    </style>
+</head>
+<body>
+    <section class="sb-contact-wrapper">
+        <div class="sb-contact-container">
+      
+          <!-- LEFT -->
+          <div class="sb-contact-left">
+            <h2 class="sb-contact-title">HAVE YOU A QUESTION?</h2>
+            <p class="sb-contact-subtitle">
+              We’d love to hear from you. Here’s how to get in touch.
+            </p>
+      
+            <form class="sb-contact-form">
+      
+              <div class="sb-form-row">
+                <input class="sb-input" type="text" placeholder="Name *">
+                <input class="sb-input" type="email" placeholder="Email *">
+              </div>
+      
+              <div class="sb-form-row">
+                <select class="sb-input">
+                  <option>Select One</option>
+                  <option>General Enquiry</option>
+                  <option>Project Enquiry</option>
+                  <option>Site Visit</option>
+                </select>
+                <input class="sb-input" type="tel" placeholder="Phone No">
+              </div>
+      
+              <textarea class="sb-textarea" placeholder="Message"></textarea>
+      
+              <div class="sb-checkbox-row">
+                <input type="checkbox" id="sb-authorize">
+                <label for="sb-authorize">
+                  I authorize Subha Builders and Developers and its representatives
+                  to contact me with updates via Email / SMS / WhatsApp / Call.
+                </label>
+              </div>
+      
+              <button class="sb-submit-btn" type="submit">SUBMIT</button>
+      
+            </form>
+          </div>
+      
+          <!-- RIGHT -->
+          <div class="sb-contact-right">
+      
+            <div class="sb-map-box">
+              <iframe
+                src="https://www.google.com/maps?q=HSR+Layout+Bangalore&output=embed"
+                loading="lazy">
+              </iframe>
+            </div>
+      
+            <div class="sb-office-info">
+              <h3>CORPORATE OFFICE</h3>
+              <p>
+                #252, 3rd Floor, V.K Pride Building,<br>
+                14th Main, HSR Layout Sector 7,<br>
+                Bengaluru – 560102
+              </p>
+      
+              <p class="sb-office-contact">
+                <strong>Sales:</strong> +91 78160 00555<br>
+                <strong>Email:</strong> info@subhabuilders.com
+              </p>
+            </div>
+      
+          </div>
+      
+        </div>
+      </section>
+      
+</body>
+</html>
