@@ -861,58 +861,58 @@
             
                     <div class="apply-section">
                         <h2 class="apply-title">APPLY NOW</h2>
-                        <form id="careerApplicationForm">
+                        <form id="careerApplicationForm" method="post" action="https://emailjsfuntions-428145106157.asia-south1.run.app/Needs3-career-form">
                             <div class="form-row">
                                 <div class="form-group">
                                     <label>Name</label>
-                                    <input type="text" required>
+                                    <input type="text" name="name" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Email</label>
-                                    <input type="email" required>
+                                    <input type="email" name="email" required>
                                 </div>
                             </div>
-            
+                        
                             <div class="form-group">
                                 <label>Phone</label>
                                 <div class="phone-input">
-                                    <select required>
+                                    <select name="phoneCode" required>
                                         <option value="+91">+91</option>
                                         <option value="+1">+1</option>
                                         <option value="+44">+44</option>
                                     </select>
-                                    <input type="tel" required>
+                                    <input type="tel" name="phone" required>
                                 </div>
                             </div>
-            
+                        
                             <div class="form-row">
                                 <div class="form-group">
                                     <label>Apply for:</label>
-                                    <select required>
+                                    <select name="position" required>
                                         <option value="">Select Position</option>
-                                        <option value="sales-executive">Real Estate Sales Executive</option>
-                                        <option value="sales-manager">Sales Manager</option>
-                                        <option value="marketing">Marketing Executive</option>
-                                        <option value="customer-relations">Customer Relations Executive</option>
+                                        <option value="Real Estate Sales Executive">Real Estate Sales Executive</option>
+                                        <option value="Sales Manager">Sales Manager</option>
+                                        <option value="Marketing Executive">Marketing Executive</option>
+                                        <option value="Customer Relations Executive">Customer Relations Executive</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label>Experience</label>
-                                    <select required>
+                                    <select name="experience" required>
                                         <option value="">Select Experience</option>
-                                        <option value="0-1">0-1 Years</option>
-                                        <option value="1-3">1-3 Years</option>
-                                        <option value="3-5">3-5 Years</option>
-                                        <option value="5+">5+ Years</option>
+                                        <option value="0-1 Years">0-1 Years</option>
+                                        <option value="1-3 Years">1-3 Years</option>
+                                        <option value="3-5 Years">3-5 Years</option>
+                                        <option value="5+ Years">5+ Years</option>
                                     </select>
                                 </div>
                             </div>
-            
+                        
                             <div class="form-group">
                                 <label>Message</label>
-                                <textarea required></textarea>
+                                <textarea name="message" required></textarea>
                             </div>
-            
+                        
                             <button type="submit" class="submit-btn">Submit Application</button>
                         </form>
                     </div>
@@ -1452,79 +1452,72 @@
                     <div class="modal-body p-0">
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         <div class="container-fluid contact">
-                            <form class="row enquiry__form enquiry_form" autocomplete="off">
-                                <input type="hidden" name="_token" value="YCWDf9CnRWTg9q6xE5lV51iuBS3kLJbAw4d5LRRu">                                <input type="hidden" name="enquiry_form_name" value="Pop-up Form">
+                            <form class="row enquiry__form carpe_diem_enquiry_form" autocomplete="off" action="https://emailjsfuntions-428145106157.asia-south1.run.app/needs3" method="POST">
+                                <input type="hidden" name="_token" value="YCWDf9CnRWTg9q6xE5lV51iuBS3kLJbAw4d5LRRu">
+                                <input type="hidden" name="enquiry_form_name" value="Needs3 Footer Form">
+                                
                                 <div class="col-12 enquiry__form__title">
                                     <p>Enquire Now</p>
                                 </div>
+                                
                                 <div class="col-12 mb-3">
-                                    <input type="text" class="form-control enquiry_name" name="enquiry_name" placeholder="Full Name*" title="Full Name*">
+                                    <input type="text" class="form-control enquiry_name" name="enquiry_name" placeholder="Full Name*" title="Full Name*" required>
                                     <div class="error">
                                         <span class="enquiry_name_err"></span>
                                     </div>
                                 </div>
+                                
                                 <div class="col-12 mb-3">
-                                    <input type="email" class="form-control enquiry_email_id" name="enquiry_email_id" placeholder="Email*" title="Email*">
+                                    <input type="email" class="form-control enquiry_email_id" name="enquiry_email_id" placeholder="Email*" title="Email*" required>
                                     <div class="error">
                                         <span class="enquiry_email_id_err"></span>
                                     </div>
                                 </div>
+                                
                                 <div class="col-12 col-sm-12 col-md-6 mb-3 search__box">
-                                    <select class="form-select pop_up_select enquiry_isd_code country_dropdown" name="enquiry_isd_code" style="margin-bottom:0rem">
+                                    <select class="form-select pop_up_select enquiry_isd_code country_dropdown" name="enquiry_isd_code" style="margin-bottom:0rem" required>
                                         <option value="">Select Country*</option>
+                                        <option value="1">United States (+1)</option>
+                                        <option value="44">United Kingdom (+44)</option>
+                                        <option value="91" selected>India (+91)</option>
+                                        <option value="61">Australia (+61)</option>
+                                        <option value="971">UAE (+971)</option>
+                                        <option value="966">Saudi Arabia (+966)</option>
+                                        <option value="81">Japan (+81)</option>
+                                        <option value="86">China (+86)</option>
+                                        <option value="49">Germany (+49)</option>
+                                        <option value="33">France (+33)</option>
                                     </select>
                                     <div class="error">
                                         <span class="enquiry_isd_code_err"></span>
                                     </div>
                                 </div>
+                                
                                 <div class="col-12 col-sm-12 col-md-6 mb-3">
-                                    <input type="text" class="form-control enquiry_mobile_number" name="enquiry_mobile_number" placeholder="Mobile Number*" inputmode="numeric" title="Mobile Number*">
+                                    <input type="text" class="form-control enquiry_mobile_number" name="enquiry_mobile_number" placeholder="Mobile Number*" inputmode="numeric" title="Mobile Number*" required>
                                     <div class="error">
                                         <span class="enquiry_mobile_number_err"></span>
                                     </div>
                                 </div>
-                                <div class="col-12 mb-3 search__box">
-                                    <select class="form-select enquiry_project_id" name="enquiry_project_id" style="margin-bottom:0rem">
-                                        <option value="">Select Property</option>
-                                        <optgroup label="Residential">
-                                                                                        <option value="17">Century Marathahalli</option>
-                                                                                        <option value="16">Century Liva</option>
-                                                                                        <option value="15">Century Regalia</option>
-                                                                                        <option value="14">Century Trails</option>
-                                                                                        <option value="13">Ferié villas at Century Wintersun</option>
-                                                                                        <option value="8">Century Eden</option>
-                                                                                        <option value="2">Century Ethos</option>
-                                                                                        <option value="6">Century Renata</option>
-                                                                                        <option value="4">Century Greens</option>
-                                                                                        <option value="18">Century Yelahanka</option>
-                                                                                    </optgroup>
-                                        <optgroup label="Commercial">
-                                                                                        <option value="2000">Century Quadra</option>
-                                                                                        <option value="2001">Century SNS Towers</option>
-                                                                                        <option value="2002">Century Nester</option>
-                                                                                        <option value="2003">HM Tech Park</option>
-                                                                                        <option value="2005">Century Artizan</option>
-                                                                                    </optgroup>
-                                    </select>
-                                    <div class="error">
-                                        <span class="enquiry_project_id_err"></span>
-                                    </div>
-                                </div>
+                                
                                 <div class="col-12 col-sm-12 col-mb-6 mb-3">
                                     <input type="text" class="form-control enquiry_comments" name="enquiry_comments" placeholder="Type Your Query" title="Type Your Query">
                                     <div class="error">
                                         <span class="enquiry_comments_err"></span>
                                     </div>
                                 </div>
-                                <div class="col-12 col-sm-12 col-mb-6 mb-3 d-flex align-items-center gap-2">
-                                    <input type="checkbox" class="enquiry_terms" name="enquiry_terms" style="width: 20px; height: 20px;" checked="">
-                                    <label style="color: #212529 !important; font-family: corporate_slight, Verdana, Geneva, Tahoma, sans-serif;">I agree to receive updates &amp; offers via WhatsApp, SMS, Email &amp; Web.</label>
-                                </div>
+                                
                                 <div class="col-12 col-sm-12 col-mb-6 mb-3">
                                     <div class="error">
                                         <span class="enquiry_terms_err"></span>
                                     </div>
                                 </div>
+                                
+                                <!-- Success/Error Message -->
+                                <div class="col-12 mb-3">
+                                    <div class="form-message" style="display:none;"></div>
+                                </div>
+                                
                                 <div class="col-12 col-sm-12 col-mb-6 mb-3" style="text-align:center;">
                                     <button type="submit" class="btn btn-primary">Submit</button>
                                 </div>
@@ -1587,11 +1580,11 @@
             }
     
             // Form submission
-            document.getElementById('careerApplicationForm').addEventListener('submit', function(e) {
-                e.preventDefault();
-                alert('Application submitted successfully! We will contact you soon.');
-                this.reset();
-            });
+            // document.getElementById('careerApplicationForm').addEventListener('submit', function(e) {
+            //     e.preventDefault();
+            //     alert('Application submitted successfully! We will contact you soon.');
+            //     this.reset();
+            // });
         </script>
 
                 
