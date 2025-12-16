@@ -237,7 +237,7 @@ p {
 }
 .backdrop {
     content: "";
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     bottom: 10rem;
     z-index: 10;
@@ -249,10 +249,10 @@ p {
     visibility: hidden;
     transition: 0.3s all linear;
 }
-.backdrop.active {
+/* .backdrop.active {
     visibility: visible;
     opacity: 1;
-}
+} */
 #otp_modal .modal-content {
     border-radius: 0;
     border: 0;

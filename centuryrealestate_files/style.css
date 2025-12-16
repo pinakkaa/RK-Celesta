@@ -174,7 +174,7 @@ p {
     padding-right: 1.5rem;
 }
 #promotional_Modal {
-    z-index: 99999999999;
+    /* z-index: 99999999999; */
 }
 .mapouter,
 .gmap_canvas {
@@ -236,7 +236,7 @@ p {
 }
 .backdrop {
     content: "";
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     bottom: 10rem;
     z-index: 10;
@@ -249,8 +249,8 @@ p {
     transition: 0.3s all linear;
 }
 .backdrop.active {
-    visibility: visible;
-    opacity: 1;
+    /* visibility: visible;
+    opacity: 1; */
 }
 #otp_modal .modal-content {
     border-radius: 0;
