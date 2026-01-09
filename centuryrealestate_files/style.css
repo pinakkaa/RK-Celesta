@@ -1,5 +1,5 @@
 .sub-tagline {
-    font-family: "Raleway", sans-serif !important
+    font-family: "Quicksand", sans-serif !important;
     font-size: 1.7rem;
     line-height: 1.6;
 }
@@ -81,7 +81,7 @@
     cursor: default !important;
 }
 .heading-primary {
-    font-family: "Raleway", sans-serif !important
+    font-family: "Quicksand", sans-serif !important;;
     font-size: 2.5rem;
     line-height: 1.2;
 }
@@ -89,7 +89,7 @@
     background-color: #0F4E8C !important;
 }
 .sub-title {
-    font-family: "Raleway", sans-serif !important
+    font-family: "Quicksand", sans-serif !important;;
     font-size: 0.7rem;
     line-height: 1;
     text-transform: uppercase;
@@ -153,7 +153,7 @@ p {
 }
 .disclaimer__inner__title {
     width: 15%;
-    font-family: "Raleway", sans-serif !important
+    font-family: "Quicksand", sans-serif !important;
     font-size: 1.3rem;
     line-height: 1;
     text-transform: uppercase;
@@ -216,7 +216,7 @@ p {
 .disclaimer__inner__link {
     width: 15%;
     text-align: center;
-    font-family: "Raleway", sans-serif !important
+    font-family: "Quicksand", sans-serif !important;
     font-size: 1.3rem;
     line-height: 1;
     text-transform: uppercase;
@@ -1092,8 +1092,8 @@ header.white .nav ul li a.enquire {
 }
 .about__left__title__content .link {
     color: #000;
-    /* font-family: "Raleway", sans-serif !important */
-    font-family: "Raleway", sans-serif !important;
+    /* font-family: "Quicksand", sans-serif !important; */
+    font-family: "Quicksand", sans-serif !important;;
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
@@ -1402,7 +1402,7 @@ header.white .nav ul li a.enquire {
 .projects__tabs__link .link {
     justify-content: flex-end;
     color: #000;
-    font-family: "Raleway", sans-serif !important
+    font-family: "Quicksand", sans-serif !important;
     font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
@@ -1481,7 +1481,7 @@ header.white .nav ul li a.enquire {
 }
 .projects__lists__item__inner__caption .link {
     color: #fff;
-    font-family: "Raleway", sans-serif !important
+    font-family: "Quicksand", sans-serif !important;;
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
@@ -1646,7 +1646,7 @@ header.white .nav ul li a.enquire {
     transform-origin: right;
 }
 .search__title h4 {
-    font-family: "Raleway", sans-serif !important
+    font-family: "Quicksand", sans-serif !important;
     font-size: 1.5rem;
     line-height: 1.5;
     color: #000;
@@ -1742,7 +1742,7 @@ font-family: "corporate_sregular", Verdana, Geneva, Tahoma, sans-serif;
     padding-left: 0;
 }
 .enquiry__form__title p {
-    font-family: "Raleway", sans-serif !important
+    font-family: "Quicksand", sans-serif !important;
     font-size: 1rem;
     line-height: 1;
     color: #fff;
@@ -1907,7 +1907,7 @@ font-family: "corporate_sregular", Verdana, Geneva, Tahoma, sans-serif;
 .ceomessage .link {
     justify-content: center;
     color: #000;
-    font-family: "Raleway", sans-serif !important
+    font-family: "Quicksand", sans-serif !important;
     font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
@@ -1979,7 +1979,7 @@ font-family: "corporate_sregular", Verdana, Geneva, Tahoma, sans-serif;
 .social__inner_right .link {
     justify-content: flex-end;
     color: #fff;
-    font-family: "Raleway", sans-serif !important
+    font-family: "Quicksand", sans-serif !important;
     font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
@@ -2045,7 +2045,7 @@ font-family: "corporate_sregular", Verdana, Geneva, Tahoma, sans-serif;
 .intro__inner .link {
     justify-content: center;
     color: #000;
-    font-family: "Raleway", sans-serif !important
+    font-family: "Quicksand", sans-serif !important;
     font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
@@ -2202,7 +2202,7 @@ font-family: "corporate_sregular", Verdana, Geneva, Tahoma, sans-serif;
     color: #000;
 }
 .year__slider__item {
-    font-family: "Raleway", sans-serif !important
+    font-family: "Quicksand", sans-serif !important;
     font-size: 4.5rem;
     line-height: 1;
     text-transform: uppercase;
@@ -2220,7 +2220,7 @@ font-family: "corporate_sregular", Verdana, Geneva, Tahoma, sans-serif;
 }
 .missionvalues__block .link {
     color: #fff;
-    font-family: "Raleway", sans-serif !important
+    font-family: "Quicksand", sans-serif !important;
     font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
@@ -2285,7 +2285,7 @@ font-family: "corporate_sregular", Verdana, Geneva, Tahoma, sans-serif;
 }
 .management .link {
     color: #000;
-    font-family: "Raleway", sans-serif !important
+    font-family: "Quicksand", sans-serif !important;
     font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
@@ -2370,7 +2370,7 @@ font-family: "corporate_sregular", Verdana, Geneva, Tahoma, sans-serif;
 }
 .bottom__links .link {
     color: #000;
-    font-family: "Raleway", sans-serif !important
+    font-family: "Quicksand", sans-serif !important;
     font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
@@ -2518,7 +2518,7 @@ font-family: "corporate_sregular", Verdana, Geneva, Tahoma, sans-serif;
     margin-bottom: 2rem;
 }
 .intro__feature p {
-    font-family: "Raleway", sans-serif !important
+    font-family: "Quicksand", sans-serif !important;
     font-size: 1.5rem;
     color: #0F4E8C;
 }
@@ -2544,7 +2544,7 @@ font-family: "corporate_sregular", Verdana, Geneva, Tahoma, sans-serif;
 .speciality__text__inner .link {
     margin-top: 3rem;
     color: #000;
-    font-family: "Raleway", sans-serif !important
+    font-family: "Quicksand", sans-serif !important;
     font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
@@ -2692,7 +2692,7 @@ font-family: "corporate_sregular", Verdana, Geneva, Tahoma, sans-serif;
 }
 .contribution__block .link {
     color: #fff;
-    font-family: "Raleway", sans-serif !important
+    font-family: "Quicksand", sans-serif !important;
     font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
@@ -2745,7 +2745,7 @@ font-family: "corporate_sregular", Verdana, Geneva, Tahoma, sans-serif;
 }
 .contribution__block .link.dark {
     color: #000;
-    font-family: "Raleway", sans-serif !important
+    font-family: "Quicksand", sans-serif !important;
     font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
@@ -2898,7 +2898,7 @@ font-family: "corporate_sregular", Verdana, Geneva, Tahoma, sans-serif;
 }
 .gallery .link {
     color: #000;
-    font-family: "Raleway", sans-serif !important
+    font-family: "Quicksand", sans-serif !important;
     font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
@@ -3192,7 +3192,7 @@ font-family: "corporate_sregular", Verdana, Geneva, Tahoma, sans-serif;
 }
 .directors__listing__block__info .link {
     color: #fff;
-    font-family: "Raleway", sans-serif !important
+    font-family: "Quicksand", sans-serif !important;
     font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
@@ -3425,7 +3425,7 @@ font-family: "corporate_sregular", Verdana, Geneva, Tahoma, sans-serif;
 }
 .project__intro__info__cta .link {
     color: #000;
-    font-family: "Raleway", sans-serif !important
+    font-family: "Quicksand", sans-serif !important;
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
@@ -3765,7 +3765,7 @@ font-family: "corporate_sregular", Verdana, Geneva, Tahoma, sans-serif;
 .project__amenities__text__inner .link {
     margin-top: 3rem;
     color: #000;
-    font-family: "Raleway", sans-serif !important
+    font-family: "Quicksand", sans-serif !important;
     font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
@@ -3854,7 +3854,7 @@ font-family: "corporate_sregular", Verdana, Geneva, Tahoma, sans-serif;
 }
 .project__gallery__tabs .walkthrough .link {
     color: #000;
-    font-family: "Raleway", sans-serif !important
+    font-family: "Quicksand", sans-serif !important;
     font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
@@ -3862,7 +3862,7 @@ font-family: "corporate_sregular", Verdana, Geneva, Tahoma, sans-serif;
     display: inline-flex;
     align-items: center;
     cursor: pointer;
-    font-family: "Raleway", sans-serif !important
+    font-family: "Quicksand", sans-serif !important;
     font-size: 1.5rem;
     line-height: 1;
     text-transform: uppercase;
@@ -4160,7 +4160,7 @@ font-family: "corporate_sregular", Verdana, Geneva, Tahoma, sans-serif;
     margin-bottom: 3rem;
 }
 .project__enquiry__form__title p {
-    font-family: "Raleway", sans-serif !important
+    font-family: "Quicksand", sans-serif !important;
     font-size: 1.5rem;
     line-height: 1;
     color: #000;
@@ -4338,7 +4338,7 @@ font-family: "corporate_sregular", Verdana, Geneva, Tahoma, sans-serif;
 }
 .project__other__left__block__item__inner__caption .link {
     color: #fff;
-    font-family: "Raleway", sans-serif !important
+    font-family: "Quicksand", sans-serif !important;
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
@@ -4461,7 +4461,7 @@ font-family: "corporate_sregular", Verdana, Geneva, Tahoma, sans-serif;
 }
 .project__other__right__block__item__inner__caption .link {
     color: #fff;
-    font-family: "Raleway", sans-serif !important
+    font-family: "Quicksand", sans-serif !important;
     font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
@@ -4569,7 +4569,7 @@ font-family: "corporate_sregular", Verdana, Geneva, Tahoma, sans-serif;
 }
 .project__links a {
     color: #000;
-    font-family: "Raleway", sans-serif !important
+    font-family: "Quicksand", sans-serif !important;
     font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
@@ -4577,7 +4577,7 @@ font-family: "corporate_sregular", Verdana, Geneva, Tahoma, sans-serif;
     display: inline-flex;
     align-items: center;
     cursor: pointer;
-    font-family: "Raleway", sans-serif !important
+    font-family: "Quicksand", sans-serif !important;
     font-size: 1.5rem;
     line-height: 1;
     text-transform: uppercase;
@@ -4637,7 +4637,7 @@ font-family: "corporate_sregular", Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
 }
 .project__gallery__tabs ul li {
-    font-family: "Raleway", sans-serif !important
+    font-family: "Quicksand", sans-serif !important;
     font-size: 1.5rem;
     line-height: 1;
     text-transform: uppercase;
@@ -4672,7 +4672,7 @@ font-family: "corporate_sregular", Verdana, Geneva, Tahoma, sans-serif;
 .project__gallery__tabs__link .link {
     justify-content: flex-end;
     color: #000;
-    font-family: "Raleway", sans-serif !important
+    font-family: "Quicksand", sans-serif !important;
     font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
@@ -4680,7 +4680,7 @@ font-family: "corporate_sregular", Verdana, Geneva, Tahoma, sans-serif;
     display: inline-flex;
     align-items: center;
     cursor: pointer;
-    font-family: "Raleway", sans-serif !important
+    font-family: "Quicksand", sans-serif !important;
     font-size: 1.5rem;
     line-height: 1;
     text-transform: uppercase;
@@ -5515,7 +5515,7 @@ svg.svg-inline-icon path {
 .press__listing__block .link {
     justify-content: center;
     color: #000;
-    font-family: "Raleway", sans-serif !important
+    font-family: "Quicksand", sans-serif !important;
     font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
@@ -6517,7 +6517,7 @@ body .tabs.style__horizontal .tabs__content.is__active {
     text-transform: uppercase;
     font-size: 1.6rem;
     letter-spacing: 3px;
-    font-family: "Raleway", sans-serif !important
+    font-family: "Quicksand", sans-serif !important;
 }
 .load__more span img {
     margin-right: 1rem;
