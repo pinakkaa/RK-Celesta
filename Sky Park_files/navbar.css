@@ -24,8 +24,8 @@ body {
 .navbar {
   /* background-color: var(--primary); */
   /* background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); */
-  /* background-color: #0F4E8C; */
-  background-color: #0F4E8C;
+  /* background-color: #b57255; */
+  background-color: #b57255;
   color: black;
   position: sticky;
   top: 0;
@@ -460,12 +460,12 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background: #0F4E8C;
+  background: #b57255;
   transition: width 0.3s ease;
 }
 
 .quick-links ul li a:hover {
-  color: #0F4E8C;
+  color: #b57255;
   transform: translateX(5px);
 }
 
@@ -527,7 +527,7 @@ body {
 
 .form-input:focus {
   outline: none;
-  border-color: #0F4E8C;
+  border-color: #b57255;
   background: rgba(255, 255, 255, 0.15);
   box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
 }
@@ -551,8 +551,8 @@ body {
 .submit-btn {
   width: 100%;
   padding: 10px;
-  /* background: linear-gradient(135deg, #0F4E8C, #0F4E8C); */
-  background-color: #0F4E8C;
+  /* background: linear-gradient(135deg, #b57255, #b57255); */
+  background-color: #b57255;
   color: white;
   border: none;
   border-radius: 8px;
@@ -566,7 +566,7 @@ body {
 }
 
 .submit-btn:hover {
-  background: linear-gradient(135deg, #0F4E8C, #0F4E8C);
+  background: linear-gradient(135deg, #b57255, #b57255);
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
 }
