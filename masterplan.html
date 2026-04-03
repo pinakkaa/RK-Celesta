@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Masterplan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Didact+Gothic&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold: #a08856;
+      --gold-light: #c9a96e;
+      --gold-pale: #e8d9c0;
+      --text-dark: #1a1612;
+      --text-mid: #5a5040;
+      --text-light: #9a8e7e;
+      --bg: #ffffff;
+      --bg-soft: #faf8f5;
+      --card-radius: 6px;
+      --transition-slide: 0.75s cubic-bezier(0.77, 0, 0.175, 1);
+    }
+
+    html, body {
+      width: 100%;
+      min-height: 100vh;
+      background: var(--bg);
+      font-family: 'Didact Gothic', sans-serif;
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+
+    /* ── SECTION ── */
+    .mp-section {
+      width: 100%;
+      background: var(--bg);
+      padding: 72px 0 80px;
+    }
+
+    /* ── HEADER ── */
+    .mp-header {
+      text-align: center;
+      padding: 0 24px 56px;
+    }
+
+    .mp-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      font-family: 'Didact Gothic', sans-serif;
+      font-size: 10px;
+      letter-spacing: 6px;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .mp-eyebrow::before,
+    .mp-eyebrow::after {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 1px;
+      background: var(--gold-pale);
+    }
+
+    .mp-title {
+      /* font-family: 'Cormorant Garamond', serif; */
+      font-size: 3rem;
+      font-weight: 300;
+      color: var(--text-dark);
+      line-height: 0.92;
+      letter-spacing: -1px;
+    }
+
+    .mp-title em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .mp-rule {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .mp-rule span {
+      display: block;
+      height: 1px;
+      width: 48px;
+      background: var(--gold-pale);
+    }
+
+    .mp-rule i {
+      display: block;
+      width: 5px;
+      height: 5px;
+      border: 1px solid var(--gold);
+      transform: rotate(45deg);
+    }
+
+    /* ── SLIDER WRAPPER ── */
+    .slider-wrapper {
+      position: relative;
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    /* ── ARROW BUTTONS ── */
+    .arrow-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      width: clamp(44px, 5vw, 60px);
+      height: clamp(44px, 5vw, 60px);
+      border-radius: 50%;
+      border: 1px solid #d6ccbe;
+      background: #ffffff;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.25s, border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      color: var(--text-mid);
+      flex-shrink: 0;
+    }
+
+    .arrow-btn:hover {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: #fff;
+      box-shadow: 0 6px 24px rgba(160,136,86,0.28);
+      transform: translateY(-50%) scale(1.06);
+    }
+
+    .arrow-btn:active { transform: translateY(-50%) scale(0.97); }
+
+    .arrow-btn svg { width: 18px; height: 18px; }
+
+    .arrow-prev { left: clamp(12px, 3vw, 40px); }
+    .arrow-next { right: clamp(12px, 3vw, 40px); }
+
+    /* ── VIEWPORT ── */
+    .slider-viewport {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .slider-track {
+      display: flex;
+      transition: transform var(--transition-slide);
+      will-change: transform;
+    }
+
+    /* ── SLIDE ── */
+    .slide {
+      min-width: 100%;
+      padding: 0 clamp(80px, 10vw, 140px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ── CARD ── */
+    .card {
+      width: 100%;
+      max-width: 1200px;
+      height: clamp(320px, 52vw, 620px);
+      border-radius: var(--card-radius);
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      transition: box-shadow 0.4s ease;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+    }
+
+    .card:hover {
+      box-shadow: 0 12px 56px rgba(0,0,0,0.16);
+    }
+
+    /* blurred image layer */
+    .card-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      filter: blur(10px) brightness(0.7) saturate(0.8);
+      transform: scale(1.10);
+      transition: filter 0.6s ease, transform 0.6s ease;
+    }
+
+    .card:hover .card-bg {
+      filter: blur(7px) brightness(0.78) saturate(0.9);
+      transform: scale(1.06);
+    }
+
+    /* subtle white vignette overlay */
+    .card-vignette {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.0) 70%);
+      pointer-events: none;
+    }
+
+    /* fine border */
+    .card-border {
+      position: absolute;
+      inset: 0;
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: var(--card-radius);
+      pointer-events: none;
+      z-index: 3;
+    }
+
+    /* hover expand hint icon */
+    .card-hint {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.5);
+      background: rgba(255,255,255,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.35s ease;
+      z-index: 4;
+      backdrop-filter: blur(4px);
+    }
+
+    .card:hover .card-hint { opacity: 1; }
+    .card-hint svg { width: 20px; height: 20px; color: #fff; }
+
+    /* ── DOTS ── */
+    .dots-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-top: 36px;
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 3px;
+      background: var(--gold-pale);
+      cursor: pointer;
+      transition: all 0.4s ease;
+      border: none;
+    }
+
+    .dot.active {
+      width: 28px;
+      background: var(--gold);
+    }
+
+    /* ── OVERLAY ── */
+    .overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(255,255,255,0);
+      transition: background 0.4s ease;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .overlay.active { display: flex; }
+    .overlay.open { background: rgba(10, 8, 5, 0.88); }
+
+    .overlay-card {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+      transform: scale(0.88);
+      opacity: 0;
+      transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.4s ease;
+      cursor: default;
+    }
+
+    .overlay.open .overlay-card {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    .overlay-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.5) saturate(0.7);
+      transform: scale(1.04);
+    }
+
+    .overlay-content {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: clamp(40px, 8vw, 100px) clamp(24px, 8vw, 160px);
+      background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.15) 50%, transparent 100%);
+      z-index: 2;
+    }
+
+    .overlay-phase {
+      font-family: 'Didact Gothic', sans-serif;
+      font-size: 10px;
+      letter-spacing: 6px;
+      color: var(--gold-light);
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .overlay-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(38px, 7vw, 88px);
+      font-weight: 300;
+      color: #fff;
+      line-height: 1;
+      margin-bottom: 24px;
+    }
+
+    .overlay-rule {
+      width: 48px;
+      height: 1px;
+      background: var(--gold);
+      margin: 0 auto 24px;
+    }
+
+    .overlay-desc {
+      font-family: 'Didact Gothic', sans-serif;
+      font-size: clamp(14px, 1.6vw, 17px);
+      color: rgba(255,255,255,0.72);
+      line-height: 1.75;
+      max-width: 600px;
+      margin-bottom: 40px;
+    }
+
+    .overlay-stats {
+      display: flex;
+      gap: clamp(28px, 5vw, 72px);
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .stat { display: flex; flex-direction: column; align-items: center; gap: 5px; }
+
+    .stat-label {
+      font-size: 9px;
+      letter-spacing: 4px;
+      color: rgba(200,180,140,0.7);
+      text-transform: uppercase;
+    }
+
+    .stat-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 300;
+      color: #fff;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: clamp(16px, 3vw, 36px);
+      right: clamp(16px, 3vw, 36px);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.3);
+      background: rgba(255,255,255,0.08);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.85);
+      z-index: 5;
+      transition: background 0.3s, border-color 0.3s;
+    }
+
+    .close-btn:hover {
+      background: rgba(255,255,255,0.18);
+      border-color: rgba(255,255,255,0.6);
+    }
+
+    .close-btn svg { width: 16px; height: 16px; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      .slide { padding: 0 clamp(52px, 14vw, 80px); }
+      .arrow-btn { width: 40px; height: 40px; }
+      .arrow-prev { left: 8px; }
+      .arrow-next { right: 8px; }
+    }
+  </style>
+</head>
+<body>
+
+<section class="mp-section">
+
+  <!-- Header -->
+  <div class="mp-header">
+    <!-- <div class="mp-eyebrow">Development Overview</div> -->
+    <h1 class="mp-title">Masterplan</em></h1>
+    <div class="mp-rule">
+      <span></span>
+      <i></i>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- Slider -->
+  <div class="slider-wrapper">
+
+    <button class="arrow-btn arrow-prev" id="prevBtn" aria-label="Previous slide">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"/>
+      </svg>
+    </button>
+
+    <div class="slider-viewport">
+      <div class="slider-track" id="track"></div>
+    </div>
+
+    <button class="arrow-btn arrow-next" id="nextBtn" aria-label="Next slide">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6"/>
+      </svg>
+    </button>
+
+  </div>
+
+  <!-- Dots -->
+  <div class="dots-row" id="dotsRow"></div>
+
+</section>
+
+<!-- Full-screen Overlay -->
+<div class="overlay" id="overlay">
+  <div class="overlay-card" id="overlayCard" onclick="event.stopPropagation()">
+    <div class="overlay-bg" id="overlayBg"></div>
+    <button class="close-btn" id="closeBtn" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    <div class="overlay-content">
+      <div class="overlay-phase" id="oPhase"></div>
+      <div class="overlay-name" id="oName"></div>
+      <div class="overlay-rule"></div>
+      <div class="overlay-desc" id="oDesc"></div>
+      <div class="overlay-stats" id="oStats"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  /* ── DATA ── */
+  const slides = [
+    {
+      phase: "Phase 01",
+      name: "The Foundation Quarter",
+      desc: "Groundbreaking infrastructure and civic-grade utilities form the backbone of the development. Primary road networks, utility corridors, and underground systems serve the entire district.",
+      bg: "linear-gradient(135deg, #b8c9b0 0%, #8aab90 35%, #5f8a6e 70%, #3d6b4e 100%)",
+      stats: [{ label: "Area", value: "48 ha" }, { label: "Timeline", value: "2024–26" }, { label: "Units", value: "820" }]
+    },
+    {
+      phase: "Phase 02",
+      name: "The Residential Spine",
+      desc: "A curated collection of mid-rise residential towers and townhomes arranged around shared garden courtyards — each home connecting directly to green corridors and shaded walkways.",
+      bg: "linear-gradient(135deg, #bdb5c9 0%, #9585b0 35%, #6e5a8a 70%, #4a3d6b 100%)",
+      stats: [{ label: "Area", value: "62 ha" }, { label: "Timeline", value: "2026–28" }, { label: "Units", value: "2,400" }]
+    },
+    {
+      phase: "Phase 03",
+      name: "The Cultural Core",
+      desc: "The heart of the masterplan — a vibrant mixed-use district anchored by a civic arts pavilion, market hall, and a landscaped public square with retail and creative studios at street level.",
+      bg: "linear-gradient(135deg, #c9b99a 0%, #b09070 35%, #8a6a48 70%, #6b4a28 100%)",
+      stats: [{ label: "Area", value: "31 ha" }, { label: "Timeline", value: "2027–29" }, { label: "Venues", value: "14" }]
+    },
+    {
+      phase: "Phase 04",
+      name: "The Waterfront District",
+      desc: "A promenade district along the water's edge — featuring premium residences, boutique hotels, and a continuous boardwalk with floating gardens and jetty pavilions bridging land and water.",
+      bg: "linear-gradient(135deg, #a8bec9 0%, #7098b0 35%, #3d708a 70%, #1e4f6b 100%)",
+      stats: [{ label: "Area", value: "55 ha" }, { label: "Timeline", value: "2028–31" }, { label: "Frontage", value: "3.2 km" }]
+    },
+    {
+      phase: "Phase 05",
+      name: "The Green Horizon",
+      desc: "The final phase completes the district's ecological ambition — 22 hectares of public parkland, urban forest, and a biodiversity corridor linking the entire masterplan to the regional landscape.",
+      bg: "linear-gradient(135deg, #c0c9a8 0%, #92b070 35%, #628a3d 70%, #3f6b1e 100%)",
+      stats: [{ label: "Parkland", value: "22 ha" }, { label: "Timeline", value: "2030–32" }, { label: "Trees", value: "9,600+" }]
+    }
+  ];
+
+  /* ── ELEMENTS ── */
+  const track    = document.getElementById('track');
+  const dotsRow  = document.getElementById('dotsRow');
+  const overlay  = document.getElementById('overlay');
+  const oPhase   = document.getElementById('oPhase');
+  const oName    = document.getElementById('oName');
+  const oDesc    = document.getElementById('oDesc');
+  const oStats   = document.getElementById('oStats');
+  const overlayBg= document.getElementById('overlayBg');
+
+  let current = 0;
+  let autoTimer = null;
+
+  /* ── BUILD SLIDES ── */
+  slides.forEach((s, i) => {
+    /* slide */
+    const slide = document.createElement('div');
+    slide.className = 'slide';
+
+    /* card */
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.setAttribute('role', 'button');
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('aria-label', `Open details: ${s.name}`);
+
+    card.innerHTML = `
+      <div class="card-bg" style="background:${s.bg};"></div>
+      <div class="card-vignette"></div>
+      <div class="card-border"></div>
+      <div class="card-hint">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+        </svg>
+      </div>
+    `;
+
+    card.addEventListener('click', () => openOverlay(i));
+    card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') openOverlay(i); });
+
+    slide.appendChild(card);
+    track.appendChild(slide);
+
+    /* dot */
+    const dot = document.createElement('button');
+    dot.className = 'dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+    dot.addEventListener('click', () => { goTo(i); stopAuto(); });
+    dotsRow.appendChild(dot);
+  });
+
+  /* ── NAVIGATION ── */
+  function goTo(idx) {
+    current = (idx + slides.length) % slides.length;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+
+  document.getElementById('prevBtn').addEventListener('click', () => { goTo(current - 1); stopAuto(); });
+  document.getElementById('nextBtn').addEventListener('click', () => { goTo(current + 1); stopAuto(); });
+
+  /* ── AUTO-ADVANCE ── */
+  function startAuto() {
+    autoTimer = setInterval(() => { if (!overlay.classList.contains('active')) goTo(current + 1); }, 5000);
+  }
+
+  function stopAuto() {
+    clearInterval(autoTimer);
+  }
+
+  startAuto();
+
+  /* ── SWIPE ── */
+  let touchStartX = 0;
+  track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 48) { goTo(dx < 0 ? current + 1 : current - 1); stopAuto(); }
+  });
+
+  /* ── OVERLAY ── */
+  function openOverlay(idx) {
+    const s = slides[idx];
+    overlayBg.style.background = s.bg;
+    oPhase.textContent = s.phase;
+    oName.textContent = s.name;
+    oDesc.textContent = s.desc;
+    oStats.innerHTML = s.stats.map(st =>
+      `<div class="stat"><div class="stat-label">${st.label}</div><div class="stat-value">${st.value}</div></div>`
+    ).join('');
+
+    overlay.style.display = 'flex';
+    requestAnimationFrame(() => requestAnimationFrame(() => overlay.classList.add('active', 'open')));
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeOverlay() {
+    overlay.classList.remove('open');
+    setTimeout(() => {
+      overlay.classList.remove('active');
+      overlay.style.display = 'none';
+      document.body.style.overflow = '';
+    }, 480);
+  }
+
+  overlay.addEventListener('click', closeOverlay);
+  document.getElementById('closeBtn').addEventListener('click', closeOverlay);
+
+  /* ── KEYBOARD ── */
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') { closeOverlay(); return; }
+    if (!overlay.classList.contains('active')) {
+      if (e.key === 'ArrowLeft')  { goTo(current - 1); stopAuto(); }
+      if (e.key === 'ArrowRight') { goTo(current + 1); stopAuto(); }
+    }
+  });
+</script>
+
+</body>
+</html>

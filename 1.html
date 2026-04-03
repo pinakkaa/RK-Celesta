@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Master Plan Center Slider</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      overflow-x: hidden;
+    }
+
+    .masterplan-section {
+      width: 100%;
+      padding: 100px 20px;
+      background: #f5f5f5;
+    }
+
+    .masterplan-title {
+      text-align: center;
+      font-size: clamp(2.5rem, 5vw, 2.5rem);
+      font-weight: 700;
+      letter-spacing: 10px;
+      text-transform: uppercase;
+      margin-bottom: 60px;
+      color: #111;
+    }
+
+    .slider-wrapper {
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slider-track {
+      display: flex;
+      transition: transform 0.7s ease;
+      will-change: transform;
+    }
+
+    .slide-cardd {
+      min-width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 20px;
+      max-height: 60vh;
+    }
+
+    .card-inner {
+      width: 100%;
+      max-width: 1100px;
+      height: 580px;
+      border-radius: 30px;
+      overflow: hidden;
+      position: relative;
+      background: #ddd;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+      cursor: pointer;
+    }
+
+    .card-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: blur(2px);
+      transform: scale(1.04);
+      transition: all 0.5s ease;
+      display: block;
+    }
+
+    .card-inner:hover img {
+      filter: blur(3px);
+      transform: scale(1.06);
+    }
+
+    /* Center Expand Icon */
+    .center-expand {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      color: #111;
+      z-index: 3;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+      backdrop-filter: blur(12px);
+      transition: 0.3s ease;
+      pointer-events: none;
+    }
+
+    .card-inner:hover .center-expand {
+      transform: translate(-50%, -50%) scale(1.08);
+    }
+
+    /* Arrows */
+    .slider-btnn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50px;
+      height: 50px;
+      border: none;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.92);
+      font-size: 1.2rem;
+      cursor: pointer;
+      z-index: 10;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+      transition: 0.3s ease;
+    }
+
+    .slider-btnn:hover {
+      transform: translateY(-50%) scale(1.08);
+      background: #fff;
+    }
+
+    .prev-btn {
+      left: 20px;
+    }
+
+    .next-btn {
+      right: 20px;
+    }
+
+    /* Modal */
+    .image-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.35s ease;
+      z-index: 9999;
+    }
+
+    .image-modal.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-content {
+      position: relative;
+      width: min(95vw, 1500px);
+      max-height: 92vh;
+      border-radius: 24px;
+      overflow: hidden;
+      background: #111;
+      transform: scale(0.92);
+      transition: transform 0.35s ease;
+      box-shadow: 0 25px 70px rgba(0,0,0,0.35);
+    }
+
+    .image-modal.active .modal-content {
+      transform: scale(1);
+    }
+
+    .modal-content img {
+      width: 100%;
+      max-height: 92vh;
+      object-fit: contain;
+      display: block;
+      background: #111;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 54px;
+      height: 54px;
+      border: none;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.92);
+      font-size: 28px;
+      cursor: pointer;
+      z-index: 10;
+      transition: 0.3s ease;
+    }
+
+    .modal-close:hover {
+      transform: rotate(90deg) scale(1.08);
+      background: #fff;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .masterplan-section {
+        padding: 80px 16px;
+      }
+
+      .card-inner {
+        height: 440px;
+      }
+
+      .slider-btnn {
+        width: 58px;
+        height: 58px;
+        font-size: 24px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .masterplan-title {
+        font-size: 2.3rem;
+        letter-spacing: 5px;
+        margin-bottom: 35px;
+      }
+
+      .card-inner {
+        height: 260px;
+        border-radius: 22px;
+      }
+
+      .center-expand {
+        width: 68px;
+        height: 68px;
+        font-size: 24px;
+      }
+
+      .slider-btnn {
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+      }
+
+      .prev-btn {
+        left: 10px;
+      }
+
+      .next-btn {
+        right: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="masterplan-section" id="Master-Plan">
+    <h2 class="masterplan-title">MASTER PLAN</h2>
+
+    <div class="slider-wrapper">
+      <button class="slider-btnn prev-btn" id="prevBtn">&#10094;</button>
+      <button class="slider-btnn next-btn" id="nextBtn">&#10095;</button>
+
+      <div class="slider-track" id="sliderTrack">
+
+        <div class="slide-cardd">
+          <div class="card-inner" data-full="./assets/Images/master plan.png">
+            <div class="center-expand">⤢</div>
+            <img src="./assets/Images/master plan.png" alt="Master Plan 1">
+          </div>
+        </div>
+
+        <div class="slide-cardd">
+          <div class="card-inner" data-full="./assets/Images/master plan 1.png">
+            <div class="center-expand">⤢</div>
+            <img src="./assets/Images/master plan 1.png" alt="Master Plan 2">
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Fullscreen Modal -->
+  <div class="image-modal" id="imageModal">
+    <div class="modal-content">
+      <button class="modal-close" id="closeModal">&times;</button>
+      <img id="modalImage" src="" alt="Expanded View">
+    </div>
+  </div>
+
+  <script>
+    const track = document.getElementById("sliderTrack");
+    const slides = document.querySelectorAll(".slide-cardd");
+    const cards = document.querySelectorAll(".card-inner");
+    const nextBtn = document.getElementById("nextBtn");
+    const prevBtn = document.getElementById("prevBtn");
+
+    let currentIndex = 0;
+
+    function updateSlider() {
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    nextBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateSlider();
+    });
+
+    prevBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateSlider();
+    });
+
+    // Modal
+    const modal = document.getElementById("imageModal");
+    const modalImage = document.getElementById("modalImage");
+    const closeModal = document.getElementById("closeModal");
+
+    cards.forEach(card => {
+      card.addEventListener("click", () => {
+        modalImage.src = card.getAttribute("data-full");
+        modal.classList.add("active");
+        document.body.style.overflow = "hidden";
+      });
+    });
+
+    closeModal.addEventListener("click", () => {
+      modal.classList.remove("active");
+      document.body.style.overflow = "";
+    });
+
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        modal.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+    });
+  </script>
+
+</body>
+</html>
